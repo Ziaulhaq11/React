@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header'
+import Footer from './components/footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function createAlert() {
+  alert('You clicked Props')
 }
 
-export default App;
+
+function OurText() {
+  return (
+    <div className = "OurText">
+      <p>This is our text</p>
+    </div>
+  )
+}
+
+function ShowMessage(props) {
+  if (props.toShow) {
+    return <h2>This is the Message</h2>
+  }else {
+    return <h2>Forbidden</h2>
+  }
+}
+
+function App() {
+  const loggedIn = true;
+  if (loggedIn) {
+    return (
+      <div className="App">
+        <Header info = "This is Props Message" number = "7"/>
+        <Header info = "This is Props Message2 " number = "4"/>
+        <Footer trademark = "Page by Zia" myAlert = {createAlert}/>
+        <ShowMessage toShow= {false}/>
+      </div>
+    );
+  }else {
+    return <h2>Forbidden</h2>
+  }
+  
+}
+
+export  {App};
+

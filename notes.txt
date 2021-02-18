@@ -1,18 +1,29 @@
-Setup
+Components :-
+Any piece of code or function is a component.
+Component is a piece of code that can be reusable
+Function components are stateless so we can use State in Class based Component only.
 
-npm i create-react-app
+Two types to create
+
+Functions inside the class are methods so no need to write function before declaring it.
+
+Exports two types :-
+export {function}
+import {function} from
+
+export default function  -- If its only one function and we can call with
+                            different name also
+import function from
+
+Return only returns one line and one element
+For one line we wrap (in this)
+For one element we wrap in <div> or we can use <React.Fragment> it will not create a container as div do
+
+Props : 
+Its an essential way to pass information from one component to other. And it is parent child 
+
+Events :
 
 
-Virtual DOM
-
-In comment section if one person replies to a comment so entire webpage will not reload that component will only reload
-
-PROPS (Properties)
-
-State
-
-Component : -
-Class based  (Powerful can be used as next scale)
-Functional
-
-Hooks :-  
+States :
+States are similar to Props but Props are immutable means cant be changed

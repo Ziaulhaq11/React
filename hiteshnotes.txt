@@ -1,0 +1,18 @@
+Setup
+
+npm i create-react-app
+
+
+Virtual DOM
+
+In comment section if one person replies to a comment so entire webpage will not reload that component will only reload
+
+PROPS (Properties)
+
+State
+
+Component : -
+Class based  (Powerful can be used as next scale)
+Functional
+
+Hooks :-  
