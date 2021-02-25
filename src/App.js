@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './components/header'
 import Footer from './components/footer'
+import styled from 'styled-components'
+import Numbers from './components/numbers'
 
 function createAlert() {
   alert('You clicked Props')
@@ -23,6 +25,20 @@ function ShowMessage(props) {
   }
 }
 
+const pStyle = {
+  color : 'white', 
+  fontSize : '2rem', // In Css font-size so if - is there remove - and write first letter in Capital
+  background : 'pink',
+  border : '2px solid white',
+  borderRadius : '20%'
+}
+
+const Paragraph = styled.p`
+  font-size : 3em;
+  color : green
+`;
+
+
 function App() {
   const loggedIn = true;
   if (loggedIn) {
@@ -30,8 +46,12 @@ function App() {
       <div className="App">
         <Header info = "This is Props Message" number = "7"/>
         <Header info = "This is Props Message2 " number = "4"/>
+        <Paragraph>New Style</Paragraph>
+        <p style = {pStyle}>Main content</p>
+        
         <Footer trademark = "Page by Zia" myAlert = {createAlert}/>
-        <ShowMessage toShow= {false}/>
+        {/*<ShowMessage toShow= {true}/>*/}
+        <Numbers/>
       </div>
     );
   }else {

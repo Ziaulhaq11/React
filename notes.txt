@@ -20,10 +20,27 @@ For one line we wrap (in this)
 For one element we wrap in <div> or we can use <React.Fragment> it will not create a container as div do
 
 Props : 
-Its an essential way to pass information from one component to other. And it is parent child 
+Its an essential way to pass information from one component to other. Parent and child both can communicate 
+<Header info = "This is Props Message" number = "7"/> 
+<Footer trademark = "Page by Zia" myAlert = {createAlert}/>
 
 Events :
 
 
 States :
 States are similar to Props but Props are immutable means cant be changed
+
+
+In index.js
+<Route path='/' component={App}></Route>
+<Route path='/header' component={Header}></Route>
+<Route path='/footer' component={Footer}></Route>
+
+React goes line by line so if you search for footer then it will first execute for path '/' because its matching that and skip header and then executes footer and if we dont want that we can use 'exact' before path
+
+
+Context :
+Reminder : Always use Starting letter capital of exporting context
+
+Styled Components :
+https://styled-components.com/docs/basics
